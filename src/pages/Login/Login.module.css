@@ -1,0 +1,69 @@
+.wrapperLogin {
+  min-height: 100vh;
+  align-content: center;
+}
+.containerLogin {
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* height: 100vh; */
+    margin: 0 auto;
+    margin-top: 32px;
+  }
+  
+  .mainLogin {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 32px;
+
+  }
+  
+  .imageSectionWrapper {
+    display: flex;
+    height: calc(650px - 64px);
+    width: 380px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 32px;
+    background-image: url(../../assets/home-phones.png);
+    background-size: 468.32px 634.15px;
+    background-position: -46px 0;
+    background-repeat: no-repeat;
+  }
+  .imageSection {
+    max-width: 350px;
+    
+  }
+  
+  .mockupImg {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .formSectionLogin {
+    display: flex;
+    width: 350px;
+    padding-top: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+
+  .formLogin {
+    padding-top: 20px;
+  }
+
+  
+
+  
+
+  
+
+  .forgotPassword {
+    margin: 5px 0 25px;
+  }
+  .forgotPassword a {
+    text-decoration: none;
+    color: #00376b;
+    font-size: 14px;
+  }

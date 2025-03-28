@@ -1,0 +1,79 @@
+.wrapperLogo {
+  margin: 50px 0 10px;
+}
+.logoInstagramLogin {
+  background-image: url("../../assets/logo.png");
+    background-position: 0px -52px;
+    background-size: auto;
+    width: 175px;
+    height: 51px;
+    background-repeat: no-repeat;
+    display: inline-block;
+  }
+  
+.inputField {
+    width: 260px;
+    padding: 11px 0 11px 8px;
+    margin-bottom: 6px;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+  .btnSubmit {
+    width: 270px;
+    background: #4cb5f9;
+    color: white;
+    border: none;
+    margin: 8px 0;
+    padding: 8px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .firstBox {
+    width: 100%;
+    background: #fff;
+    border: 1px solid #dbdbdb;
+    text-align: center;
+  }
+
+  .secondBox {
+    width: 100%;
+    font-size: 14px;
+    background: #fff;
+    padding: 5px 0px;
+    border: 1px solid #dbdbdb;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .orText {
+    margin: 14px 0 22px;
+    color: #737373;
+    font-weight: bold;
+    font-size: 13px;
+  }
+
+  .fbLoginBtn {
+    width: 270px;
+    color: #ffffff;
+    background-color: #0095f6;
+    border: none;
+    padding: 9px 16px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .pageChange {
+    text-decoration: none;
+    font-weight: 500;
+    color: #0095f6;
+  }
+  .info-text {
+    margin:  0;
+    color: #737373;
+  }
+  .fakeLink {
+    color: #00376B;
+    text-decoration: none;
+  }
