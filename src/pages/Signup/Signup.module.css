@@ -1,28 +1,28 @@
 .wrapperSignup {
-    min-height: 100vh;
+  min-height: 100vh;
 }
 .containerSignup {
-    width: 350px;
-    margin: 10px auto 44px;
+  width: 350px;
+  margin: 10px auto 44px;
 }
 
 .descriptionSignup {
-    margin: 0 auto 10px;
-    width: 270px;
-    font-weight: 500;
-    color: #737373;
+  margin: 0 auto 10px;
+  width: 270px;
+  font-weight: 500;
+  color: #737373;
 }
 .clause {
-    width: 270px;
-    margin: 10px auto;
-    font-size: 12px;
+  width: 270px;
+  margin: 10px auto;
+  font-size: 12px;
 }
 .leaenMore {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 .endFormSignup {
-    padding-bottom: 25px;
+  padding-bottom: 25px;
 }
 .haveAccount {
-    display: grid;
+  display: grid;
 }

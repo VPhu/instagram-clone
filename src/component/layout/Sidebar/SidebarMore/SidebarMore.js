@@ -29,7 +29,6 @@ const newFriends = [
   },
   {
     userName: "pimhtnn_",
-    // avt: "https://prephoops.com/wp-content/uploads/sites/2/2024/05/IMG_5511.png",
     avt: nNhu,
     status: "Suggested for you",
   },
@@ -51,7 +50,7 @@ const SidebarMore = () => {
                   <div className={styles.wrapperImageUser}>
                     <img
                       className={styles.avatar}
-                      src={user.avt ? user.avt : "https://prephoops.com/wp-content/uploads/sites/2/2024/05/IMG_5511.png"}
+                      src={user.avt || "https://prephoops.com/wp-content/uploads/sites/2/2024/05/IMG_5511.png"}
                       alt="User Avatar"
                     />
                   </div>
