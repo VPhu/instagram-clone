@@ -30,7 +30,7 @@ const ModalNotifications = () => {
     <div className={styles.notificationsWrapper}>
       <h1 className={styles.notificationsTitle}>Notifications</h1>
       <div className={styles.notificationsContainer}>
-        {dataNoti.length === 0 ? (
+        {!dataNoti.length ? (
           <div className={styles.notificationsNoData}>
             <div className={styles.notificationsNoDataIconWrapper}>
               <div className={styles.notificationsNoDataIcon}>

@@ -6,22 +6,58 @@ import NotifComponent from "../Modal/ModalNotifications/ModalNotifications";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const menuItems = [
-    { name: "Home", icon: "fas fa-house", path: "/" },
-    { name: "Search", icon: "fas fa-search", path: "/search" },
-    { name: "Explore", icon: "fas fa-compass", path: "/explore" },
-    { name: "Reels", icon: "fas fa-clapperboard", path: "/reels" },
-    { name: "Messages", icon: "fas fa-envelope", path: "/messages" },
-    { name: "Notifications", icon: "fas fa-bell", path: "/notifications" },
-    { name: "Create", icon: "fas fa-square-plus", path: "/create" },
-    { name: "Profile", icon: "fas fa-user", path: "/profile" },
+  { name: "Home", icon: "fas fa-house", path: "/" },
+  { name: "Search", icon: "fas fa-search", path: "/search", modal: "search" },
+  { name: "Explore", icon: "fa-regular fa-compass", path: "/explore" },
+  { name: "Reels", icon: "fa-regular fa-circle-play", path: "/reels" },
+  { name: "Messages", icon: "fa-regular fa-paper-plane", path: "/messages" },
+  {
+    name: "Notifications",
+    icon: "fa-regular fa-heart",
+    path: "/notifications",
+    modal: "notifications",
+  },
+  { name: "Create", icon: "fa-regular fa-square-plus", path: "/create" },
+  { name: "Profile", icon: "fa-regular fa-circle-user", path: "/profile" },
 ];
 const menuItems2 = [
-    { name: "AI Studio", icon: "fa-solid fa-microchip", path: "/ai" },
-    { name: "Threads", icon: "fa-brands fa-threads", path: "/threads" },
-    { name: "More", icon: "fas fa-bars", path: "/more" },
-    
-]
+  {
+    name: "AI Studio",
+    icon: "fa-regular fa-circle",
+    path: "/ai",
+  },
+  { name: "Threads", icon: "fa-brands fa-threads", path: "/threads" },
+  { name: "More", icon: "fas fa-bars", path: "/more" },
+];
+
 const Sidebar = () => {
+  const [modal, setModal] = useState("");
+  const modalRef = useRef();
+
+  const handleSidebarModal = useCallback(
+    (modalName) => {
+      modal === modalName ? setModal("") : setModal(modalName);
+    },
+    [modal]
+  );
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (modalRef.current && !modalRef.current.contains(event.target)) {
+        setModal("");
+      }
+    };
+
+    if (modal) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [modal]);
+
+  const renderNavItem = (item) => {
     return (
       <>
         <i className={`${item.icon} ${styles.iconCustom}`} />
@@ -32,17 +68,20 @@ const Sidebar = () => {
   const renderLogo = () => {
     return (
       <div>
-        {!modal && <div className={styles.sidebarLogoHead}>             
-              <div className={styles.logoSidebar}></div>
-          </div>}
-          {modal && <div className={styles.sidebarLogo}>
-                <div className={styles.iconLogo}>
-                  <i className="fa-brands fa-instagram"></i>
-                </div>
-              </div>}
+        {modal ? (
+          <div className={styles.sidebarLogo}>
+            <div className={styles.iconLogo}>
+              <i className="fa-brands fa-instagram"></i>
+            </div>
+          </div>
+        ) : (
+          <div className={styles.sidebarLogoHead}>
+            <div className={styles.logoSidebar}></div>
+          </div>
+        )}
       </div>
-    )
-  }
+    );
+  };
 
   return (
     <aside className={styles.sidebar}>
@@ -50,30 +89,40 @@ const Sidebar = () => {
         <ul className={styles.sidebarWrapper}>
           {renderLogo()}
           {menuItems.map((item, index) => (
-            <li className={`${styles.sidebarLinkItem} ${modal === item.modal ? styles.activeItemNav : ""}`}
-            key={index}>
+            <li
+              className={`${styles.sidebarLinkItem} ${
+                modal === item.modal ? styles.activeItemNav : ""
+              }`}
+              key={index}
+            >
               {item.modal ? (
-                <button className={styles.itemNavBtn} onClick={() => handleSidebarModal(item.modal)}>
+                <button
+                  className={styles.itemNavBtn}
+                  onClick={() => handleSidebarModal(item.modal)}
+                >
                   {renderNavItem(item)}
                 </button>
               ) : (
-                <Link className={styles.itemNavLink} to={item.path}>{renderNavItem(item)}</Link>
+                <Link className={styles.itemNavLink} to={item.path}>
+                  {renderNavItem(item)}
+                </Link>
               )}
             </li>
           ))}
         </ul>
 
         <ul className={styles.sidebarWrapper}>
-      {menuItems2.map((item, index) => (
-        <li className={styles.sidebarLinkItem} key={index}>
-          <Link className={styles.itemNavLink} to={item.path}>
-            <i className={`${item.icon} ${styles.iconCustom}`} />
-            {!modal && <span className={styles.itemNavName}>{item.name}</span>}
-          </Link>
-        </li>
-      ))}
-    </ul>
-
+          {menuItems2.map((item, index) => (
+            <li className={styles.sidebarLinkItem} key={index}>
+              <Link className={styles.itemNavLink} to={item.path}>
+                <i className={`${item.icon} ${styles.iconCustom}`} />
+                {!modal && (
+                  <span className={styles.itemNavName}>{item.name}</span>
+                )}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
       <div className={styles.modalSidebar} ref={modalRef}>
         {modal === "search" && <SearchComponent />}
