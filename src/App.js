@@ -5,7 +5,6 @@ import HomePage from "./pages/HomePage/HomePage";
 import Login from "./pages/Login/Login";
 import Signup from "./pages/Signup/Signup";
 import Test from "../src/pages/HomePage/test";
-// import Profile from "./pages/Profile";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 
