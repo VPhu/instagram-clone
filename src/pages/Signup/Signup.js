@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Footer from "../../component/layout/Footer/Footer";
 import styles from "./Signup.module.css";
 const Signup = () => {
@@ -7,8 +7,6 @@ const Signup = () => {
   const [password, setPassword] = useState("");
   const [fullName, setFullName] = useState("");
   const [username, setUsername] = useState("");
-  const navigate = useNavigate();
-
   const handleSignup = () => {
     
   };
@@ -60,16 +58,16 @@ const Signup = () => {
             <div className={styles.leaenMore}>
               <p className="info-text">
                 Users of our services may have uploaded your contact information
-                to Instagram. <Link className="fakeLink">Learn more</Link>
+                to Instagram. <Link className="fakeLink" to="#">Learn more</Link>
               </p>
             </div>
             <div className={styles.agreePolicy}>
               <p className="info-text">
                 {" "}
                 By signing up, you agree to our{" "}
-                <Link className="fakeLink">Terms</Link> ,{" "}
-                <Link className="fakeLink">Privacy Policy</Link> and{" "}
-                <Link className="fakeLink">Cookie Policy</Link> .
+                <Link className="fakeLink" to="#">Terms</Link> ,{" "}
+                <Link className="fakeLink" to="#">Privacy Policy</Link> and{" "}
+                <Link className="fakeLink" to="#">Cookie Policy</Link> .
               </p>
             </div>
           </div>
