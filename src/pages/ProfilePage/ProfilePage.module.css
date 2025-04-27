@@ -1,0 +1,36 @@
+.profileMain {
+    width: calc(100% - 244px);
+    position: absolute;
+    right: 0;
+}
+.profileContainer {
+    max-width: 935px;
+    padding: 30px 20px 0;
+    margin: 0 auto;
+}
+
+.controlBarProfile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 52px;
+    border-top: 2px solid #e7e7e7;
+    gap: 60px;
+}
+.controlElement, .controlElementEnd {
+    display: flex;
+    font-size: 12px;
+    font-weight: 600;
+    color: #737373;
+    cursor: pointer;
+    padding: 18px 0;
+}
+.controlElementName {
+    margin-left: 6px;
+}
+
+.activeControl {
+    border-top: 2px solid #000000;
+    color: #000000;
+}
+

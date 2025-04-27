@@ -1,0 +1,84 @@
+.profileInfoWrapper {
+    width: 100%;
+    display: flex;
+    margin-bottom: 44px;
+}
+
+.userInformationWrapper{
+    flex: 2;
+}
+
+
+.profileUsername {
+    margin-bottom: 20px;
+}
+.btnInfoProfile, .btnUserName, .profileInfoAvatarWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profileUsername, .userInformationWrapper {
+    display: flex;
+    align-items: center;
+}
+.userName {
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.btnInfoProfile {
+    height: 32px;
+    gap: 10px;
+}
+.btnUserName {
+    background-color: #EFEFEF;
+    height: 100%;
+    border-radius: 5px;
+}
+.btnStyle {
+    font-size: 14px;
+    padding: 0 16px;
+    font-weight: 600;
+}
+
+.btnSetting {
+    padding: 4px 8px;
+    font-size: 24px;
+}
+
+.profileInfoAvatarWrapper {
+    flex: 1;
+}
+.profileInfoAvatar {
+    width: 150px;
+    height: 150px;
+    margin-top: 30px;
+    border: 2px solid #cccc;
+    border-radius: 50%;
+}
+.avatar {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.profileStats {
+    display: flex;
+    color: #737373;
+    margin-bottom: 30px;
+}
+.totalPosts, .totalFollower {
+    margin-right: 40px;
+}
+.numbers {
+    color: #000000;
+    font-weight: 600;
+}
+
+.fullName {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.btnSetting, .userName, .btnUserName, .totalFollower, .totalFollowing {
+    cursor: pointer;
+}
