@@ -34,6 +34,7 @@ const Sidebar = () => {
   const [modal, setModal] = useState("");
   const modalRef = useRef();
 
+<<<<<<< HEAD
   const handleSidebarModal = useCallback(
     (modalName) => {
       modal === modalName ? setModal("") : setModal(modalName);
@@ -42,6 +43,17 @@ const Sidebar = () => {
   );
 
   useEffect(() => {
+=======
+  const handleSidebarModal = useCallback((modalName) => {
+    if (modal === modalName) {
+      setModal("");
+    } else {
+      setModal(modalName);
+    }
+  }, [modal]);
+
+  useEffect(()=> {
+>>>>>>> 1989a06 (Feat/Update-SidebarTools)
     const handleClickOutside = (event) => {
       if (modalRef.current && !modalRef.current.contains(event.target)) {
         setModal("");
@@ -55,7 +67,11 @@ const Sidebar = () => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
+<<<<<<< HEAD
   }, [modal]);
+=======
+  }, [modal])
+>>>>>>> 1989a06 (Feat/Update-SidebarTools)
 
   const renderNavItem = (item) => {
     return (
