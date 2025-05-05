@@ -42,9 +42,7 @@
     display: flex;
     align-items: center;
 }
-.wrapperItemUser {
-    
-}
+
 .itemUser {
     padding: 8px 16px;
     justify-content: space-between;

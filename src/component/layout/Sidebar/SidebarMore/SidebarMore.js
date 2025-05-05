@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "./SidebarMore.module.css";
-import vPhong from "../../../../assets/vanphong.jpg"
-import tSon from "../../../../assets/thanhson.jpg"
-import vThuong from "../../../../assets/vanthuong.jpg"
-import nXuan from "../../../../assets/xuannguyen.jpg"
-import nNhu from "../../../../assets/nhunhu.jpg"
+import vPhong from "../../../../assets/vanphong.jpg";
+import tSon from "../../../../assets/thanhson.jpg";
+import vThuong from "../../../../assets/vanthuong.jpg";
+import nXuan from "../../../../assets/xuannguyen.jpg";
+import nNhu from "../../../../assets/nhunhu.jpg";
 
 const newFriends = [
   {
@@ -51,7 +51,11 @@ const SidebarMore = () => {
                   <div className={styles.wrapperImageUser}>
                     <img
                       className={styles.avatar}
-                      src={user.avt ? user.avt : "https://prephoops.com/wp-content/uploads/sites/2/2024/05/IMG_5511.png"}
+                      src={
+                        user.avt
+                          ? user.avt
+                          : "https://prephoops.com/wp-content/uploads/sites/2/2024/05/IMG_5511.png"
+                      }
                       alt="User Avatar"
                     />
                   </div>
@@ -68,9 +72,7 @@ const SidebarMore = () => {
           </ul>
         </div>
       </div>
-      <div className={styles.footerSidebarMore}>
-            
-      </div>
+      <div className={styles.footerSidebarMore}></div>
     </div>
   );
 };
