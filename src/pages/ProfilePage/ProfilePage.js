@@ -48,7 +48,7 @@ const Profile = () => {
   const [active, setActive] = useState("POSTS");
 
   return (
-    <div>
+    <div className={styles.profileWrapper}>
       <Sidebar />
       <div className={styles.profileMain}>
         <div className={styles.profileContainer}>

@@ -1,0 +1,116 @@
+.notificationsWrapper {
+  width: 394px;
+  height: 100%;
+  background-color: #ffffff;
+  border-left: none;
+  border-radius: 0px 20px 20px 0;
+  box-shadow: rgba(0, 0, 0, 0.15) 4px 0 8px -2px;
+}
+.notificationsTitle {
+  margin: 0;
+  font-weight: 500;
+  padding: 25px;
+}
+.notificationsNoData {
+  padding: 0 40px;
+}
+.notificationsNoDataIcon {
+  font-size: 40px;
+  height: 45px;
+  width: 45px;
+  padding: 10px;
+  border-radius: 50%;
+  border: 1px solid #000000;
+  margin: 0 auto;
+}
+.notificationsNoDataText,
+.notificationsNoDataTextBtn {
+  text-align: center;
+  padding-top: 15px;
+  font-size: 14px;
+}
+.notificationsNoDataTextBtn {
+  font-weight: 600;
+}
+
+.notificationsNoDataIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notificationsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.notificationsItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 24px;
+  border-bottom: 1px solid #eee;
+}
+
+.notiLeft {
+  display: flex;
+  align-items: center;
+}
+
+.notiAvatarGroup {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  margin-right: 20px;
+}
+
+.avatarFull {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+.avatarImg {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  border: 2px solid white;
+}
+
+.notiText {
+  padding-right: 20px;
+  font-size: 14px;
+}
+
+.notificationsUser {
+  font-weight: 600;
+}
+
+.notificationsTime {
+  color: #999;
+  font-size: 12px;
+}
+
+.notiPostImg img {
+  width: 44px;
+  height: 44px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.avatarTopLeft {
+  top: -2px;
+  left: 0;
+  z-index: 1;
+}
+
+.avatarBottomRight {
+  bottom: -3px;
+  right: -15px;
+  z-index: 2;
+}
