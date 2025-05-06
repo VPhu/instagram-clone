@@ -1,0 +1,72 @@
+.explore {
+    display: flex;
+    height: 100vh;
+  }
+  .exploreWrapper {
+    margin: 0 auto;
+    overflow-y: auto;
+    scrollbar-width: none;
+
+  }
+  .exploreContainer {
+    padding: 24px 20px 0;
+    margin: 0 20px;
+
+  }
+  
+  .listExplore {
+    display: grid;
+    max-width: 975px;
+    padding-top: 24px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+
+  }
+
+  .imageExplore {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .exploreItem {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 1;
+    cursor: pointer;
+  }
+
+  
+  .overlay {
+    color: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .totalLike,
+  .totalComment {
+    display: flex;
+    gap: 5px;
+    font-weight: 600;
+  }
+  
+  .iconLike,
+  .iconComment {
+    font-size: 20px;
+    color: #ffffff;
+  }
+  
+  .exploreItem:hover .overlay {
+    opacity: 1;
+  }
+  
