@@ -7,6 +7,7 @@ import Signup from "./pages/Signup/Signup";
 import Profile from "./pages/ProfilePage/ProfilePage";
 import Explore from "./pages/Explore/Explore";
 import Reels from "./pages/Reels/Reels";
+import Messages from "./pages/Messages/Messages";
 import Test from "../src/pages/HomePage/test";
 // import Profile from "./pages/Profile";
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -23,6 +24,7 @@ function App() {
           <Route path="/Profile" element={<Profile />} />
           <Route path="/explore" element={<Explore/>}/>
           <Route path="/reels" element={<Reels/>}/>
+          <Route path="/messages" element={<Messages/>}/>
           <Route path="/test" element={<Test />} />
 
         </Routes>
