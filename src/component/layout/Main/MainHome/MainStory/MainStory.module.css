@@ -1,81 +1,81 @@
 .wrapperMainStory {
   position: relative;
-    width: 630px;
-    overflow-x: auto;
-    padding: 10px 0;
-    margin-bottom: 24px;
-  }
-  
-  .mainStory {
-    display: flex;
-    gap: 14px;
-    width: max-content;
-  }
-  
-  .storyItem {
-    text-align: center;
-    width: 66px;
-    flex-shrink: 0;
-  }
-  
-  .avatarStory {
-    border-radius: 50%;
-    background: 
-      radial-gradient(rgba(0, 0, 0, 0.15) 60%, transparent 0),
-      radial-gradient(white 65%, transparent 0),
-      linear-gradient(to top right, orange, deeppink);
-    padding: 2px;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-  }
-  
-  .avatar {
-    width: 54px;
-    height: 54px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid white;
-  }
-  
-  .userName {
-    margin-top: 6px;
-    color: #000000;
-    font-size: 12px;
-    width: 66px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  
-  .arrowLeft, .arrowRight {
-    height: 45px;
-    width: 45px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    z-index: 1000;
-  }
-  .arrowLeft {
-    top: 20%;
-    left: 5px;
-  }
-  .arrowRight {
-    top: 20%;
-    right: 5px;
-  }
+  width: 630px;
+  overflow-x: auto;
+  padding: 10px 0;
+  margin-bottom: 24px;
+}
 
-  .iconArrow {
-    width: 25px;
-    height: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    background-color: #ffffffff;
-  }
+.mainStory {
+  display: flex;
+  gap: 14px;
+  width: max-content;
+}
+
+.storyItem {
+  text-align: center;
+  width: 66px;
+  flex-shrink: 0;
+}
+
+.avatarStory {
+  border-radius: 50%;
+  background: radial-gradient(rgba(0, 0, 0, 0.15) 60%, transparent 0),
+    radial-gradient(white 65%, transparent 0),
+    linear-gradient(to top right, orange, deeppink);
+  padding: 2px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.avatar {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+.userName {
+  margin-top: 6px;
+  color: #000000;
+  font-size: 12px;
+  width: 66px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.arrowLeft,
+.arrowRight {
+  height: 45px;
+  width: 45px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1000;
+}
+.arrowLeft {
+  top: 20%;
+  left: 5px;
+}
+.arrowRight {
+  top: 20%;
+  right: 5px;
+}
+
+.iconArrow {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #ffffff;
+}

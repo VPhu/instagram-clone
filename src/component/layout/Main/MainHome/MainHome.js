@@ -8,8 +8,6 @@ const MainHome = () => {
   <div className={styles.mainHomeContainer}>
     <MainStory/>
     <MainPost/>
-        
-
   </div>
   )
 };

@@ -48,7 +48,6 @@ const list = [
 const MainStory = () => {
   return (
     <div className={styles.wrapperMainStory}>
-        {/* <div className={styles.swiperWrapper}></div> */}
       <Swiper
         spaceBetween={8}
         slidesPerView={"auto"}
