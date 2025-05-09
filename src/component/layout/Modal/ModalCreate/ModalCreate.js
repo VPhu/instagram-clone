@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './CreateModal.module.css';
+import styles from './ModalCreate.module.css';
 
 const CreateModal = () => {
   return (
