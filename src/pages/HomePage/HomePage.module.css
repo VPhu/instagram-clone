@@ -1,0 +1,13 @@
+.wrapperHome {
+  position: relative;
+}
+.containerHome {
+  width: calc(100% - 244px);
+  position: absolute;
+  right: 0;
+}
+
+.mainHome {
+  display: flex;
+  justify-content: center;
+}
