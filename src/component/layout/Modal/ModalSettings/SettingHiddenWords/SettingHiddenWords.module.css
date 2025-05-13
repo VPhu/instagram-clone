@@ -1,0 +1,66 @@
+.hiddenWordsItem {
+  padding: 10px 16px;
+  border: 1px solid rgb(219, 219, 219);
+  border-radius: 20px;
+}
+.hiddenWordsSelectInput {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+}
+.btnSelectInput {
+  margin-left: 16px;
+}
+.btnChangeSelectInput {
+    color: rgb(142, 142, 142);
+}
+.cursorPointer {
+    cursor: pointer;
+}
+
+.commentFilteringContainer {
+    margin: 32px 0;
+}
+.headerCommentFiltering {
+    display: flex;
+    align-items: center;
+}
+.backButton {
+    border: none;
+    outline: none;
+    background-color: #fff;
+    font-size: 24px;
+    margin-right: 16px;
+}
+.inputWrapper {
+    display: flex;
+    flex-direction: column;
+}
+.inputField {
+    height: 150px;
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    margin: 16px 0;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+.addButton {
+    height: 32px;
+    padding: 0 16px;
+    background-color: rgb(0, 149, 246);
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.addButtonWrapper {
+    margin-bottom: 16px;
+}
+.selectInputSwitch {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}

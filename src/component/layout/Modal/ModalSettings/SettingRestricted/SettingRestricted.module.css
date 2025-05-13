@@ -1,0 +1,19 @@
+.descriptionRestricted {
+  font-size: 16px;
+  padding-bottom: 24px;
+}
+.descriptionRestrictedText {
+  color: rgb(142, 142, 142);
+}
+.linkChange {
+  color: rgb(0, 55, 107);
+  cursor: pointer;
+}
+.restrictedMessageNoData {
+  display: flex;
+  justify-content: center;
+}
+.textMessageNoData {
+  color: rgb(142, 142, 142);
+  margin-top: 100px;
+}

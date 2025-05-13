@@ -1,0 +1,32 @@
+.radioGroup {
+  display: flex;
+  flex-direction: column;
+  padding-top: 8px;
+  margin-bottom: 25px;
+  gap: 25px;
+}
+.radioOption {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+.radioOption input {
+  accent-color: #000;
+  margin: 0;
+  height: 24px;
+  width: 24px;
+}
+.descriptionRadio {
+  color: rgb(142, 142, 142);
+  font-size: 12px;
+}
+.radioOptionText {
+  display: flex;
+  flex-direction: column;
+}
+.comments {
+  gap: 0;
+}

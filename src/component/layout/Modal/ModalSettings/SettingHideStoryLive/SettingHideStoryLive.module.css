@@ -1,0 +1,4 @@
+.hideStoryLiveFromContainer {
+  display: flex;
+  flex-direction: column;
+}

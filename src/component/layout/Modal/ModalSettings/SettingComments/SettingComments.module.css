@@ -1,0 +1,16 @@
+.settingCommentsContainer {
+    display: flex;
+    flex-direction: column;
+}
+.subTitleSettingComments {
+    margin: 16px 0 8px;
+    font-weight: 600;
+}
+.settingCommentsSwitch {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.settingCommentsDescription {
+    padding: 8px 0 4px;
+}

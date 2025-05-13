@@ -1,0 +1,14 @@
+.selectPrivateAccount {
+  display: flex;
+  justify-content: space-between;
+  padding: 23px 16px;
+  border: 1px solid rgb(219, 219, 219);
+  border-radius: 20px;
+}
+.privateAccountDescriptionWrapper {
+  margin-top: 32px;
+}
+.privateAccountDescription {
+  margin-bottom: 16px;
+  line-height: 16px;
+}

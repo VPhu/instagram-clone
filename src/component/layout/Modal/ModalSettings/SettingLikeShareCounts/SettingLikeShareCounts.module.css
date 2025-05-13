@@ -1,0 +1,16 @@
+.settingLikeShareCounts {
+    display: flex;
+    flex-direction: column;
+}
+.likeShareCountsContainer {
+    margin-top: 8px;
+}
+.inputSwitchHide {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.endDescriptionLikeShareCounts {
+  margin-top: 16px;
+  font-size: 12px;
+}

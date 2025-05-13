@@ -1,0 +1,11 @@
+.sharingInputSelect {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 16px;
+  border: 1px solid rgb(219, 219, 219);
+  border-radius: 20px;
+}
+.descriptionSharing {
+  margin-top: 32px;
+}

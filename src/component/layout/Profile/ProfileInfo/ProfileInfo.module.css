@@ -37,6 +37,8 @@
 }
 .btnStyle {
     font-size: 14px;
+    color: #000000;
+    text-decoration: none;
     padding: 0 16px;
     font-weight: 600;
 }

@@ -1,0 +1,20 @@
+.radioGroup {
+  display: flex;
+  flex-direction: column;
+}
+.radioOption {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  font-size: 16px;
+}
+
+.radioOption input {
+  accent-color: #000;
+  margin: 0;
+  height: 18px;
+  width: 18px;
+}
+ 

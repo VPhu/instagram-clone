@@ -8,6 +8,7 @@ import Profile from "./pages/ProfilePage/ProfilePage";
 import Explore from "./pages/Explore/Explore";
 import Reels from "./pages/Reels/Reels";
 import Messages from "./pages/Messages/Messages";
+import AccountSettings from "./pages/AccountSettings/AccountSettings";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function App() {
@@ -22,6 +23,8 @@ function App() {
           <Route path="/explore" element={<Explore/>}/>
           <Route path="/reels" element={<Reels/>}/>
           <Route path="/messages" element={<Messages/>}/>
+          <Route path="/account" element={<AccountSettings />} />
+          <Route path="/account/:nameLink" element={<AccountSettings/>}/>
         </Routes>
       </Router>
     </GlobalStyles>

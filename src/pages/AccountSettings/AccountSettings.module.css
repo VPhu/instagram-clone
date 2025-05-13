@@ -1,0 +1,85 @@
+.settingsWrapper {
+  display: flex;
+  height: 100vh;
+}
+.settingsAccount {
+    display: flex;
+    flex-grow: 1;
+}
+
+.sidebarSettings {
+  width: 315px;
+  background-color: #fff;
+  padding: 24px 0;
+  margin-top: 16px;
+  border-right: 1px solid #ddd;
+  overflow-y: auto;
+}
+
+.titleSidebarSettings {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 0 16px;
+  margin:0 34px 24px;
+}
+
+.installationGroup {
+    margin: 0 34px;
+}
+
+.sectionTitle {
+  font-size: 12px;
+  color: #737373;
+  font-weight: 600;
+    padding: 12px 16px;
+    margin: 0;
+}
+
+.menuList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ItemSetting {
+}
+.iconMenuItemSetting {
+    font-size: 24px;
+}
+.nameMenuItemSetting {
+    font-size: 14px;
+}
+
+.menuLink {
+  text-decoration: none;
+  color: #000;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.menuLink:hover {
+  background-color: #f0f0f0;
+}
+
+.settingsItemWrapper {
+  flex: 1;
+  background-color: #ffffff;
+  overflow-y: auto;
+}
+.settingsItemContainer {
+  max-width: 706px;
+  min-height: calc(100vh - 135px);
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 36px 48px;
+}
+
+.contentPlaceholder {
+  font-size: 16px;
+  color: #000;
+}
+

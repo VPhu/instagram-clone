@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./ProfileInfo.module.css";
+import { Link } from "react-router-dom";
 const ProfileInfo = () => {
   return (
     <div className={styles.profileInfoWrapper}>
@@ -21,7 +22,7 @@ const ProfileInfo = () => {
 
             <div className={styles.btnInfoProfile}>
               <div className={styles.btnUserName}>
-                <span className={styles.btnStyle}>Edit profile</span>
+                <Link to="/account/edit" className={styles.btnStyle}>Edit profile</Link>
               </div>
               <div className={styles.btnUserName}>
                 <span className={styles.btnStyle}>View archive</span>

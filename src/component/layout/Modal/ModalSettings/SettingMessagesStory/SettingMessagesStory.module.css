@@ -1,0 +1,92 @@
+.messagesStoryContainer {
+  display: flex;
+  flex-direction: column;
+}
+.messagesStoryItemSelect {
+  padding: 10px 16px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(219, 219, 219);
+  border-radius: 20px;
+  cursor: pointer;
+}
+.messagesStoryItemSelectFirst,
+.messagesStoryItemSelectEnd {
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.messagesStoryItemSelectText {
+  margin: 8px 0;
+  font-size: 14px;
+}
+.messagesStoryItemSelectIcon {
+  font-size: 14px;
+  color: rgb(115, 115, 115);
+  margin-left: 12px;
+}
+
+.descriptionItemMessgesStory {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 12px;
+  padding: 12px 0;
+  margin-bottom: 16px;
+  max-width: 462px;
+}
+.selectItemMessgesStory {
+  margin: 16px 0;
+}
+.titleSelectItemMessgesStory {
+  font-size: 16px;
+}
+.descriptionSelectItemMessgesStory {
+  margin: 8px 0 12px;
+}
+.messagesStoryItemSelectTextWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.containerItemMessgesStory {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+.selectSwitchItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.descriptionItemActivity {
+  margin-bottom: 16px;
+}
+.selectSwitchItemText {
+  font-size: 16px;
+  margin: 3px 0;
+}
+
+.radioGroup {
+  display: flex;
+  flex-direction: column;
+  padding-top: 8px;
+  margin-bottom: 25px;
+  gap: 25px;
+}
+.radioOption {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+.radioOption input {
+  accent-color: #000;
+  margin: 0;
+  height: 18px;
+  width: 18px;
+}
