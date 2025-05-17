@@ -4,6 +4,8 @@ import GlobalStyles from "./pages/GlobalStyles/index";
 import HomePage from "./pages/HomePage/HomePage";
 import Login from "./pages/Login/Login";
 import Signup from "./pages/Signup/Signup";
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 function App() {
   return (
@@ -12,7 +14,8 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/Signup" element={<Signup />} />
+          <Route path="/signup" element={<Signup />} />
+
         </Routes>
       </Router>
     </GlobalStyles>

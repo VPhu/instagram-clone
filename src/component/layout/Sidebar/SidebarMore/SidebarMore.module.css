@@ -1,0 +1,71 @@
+.wrapperSidebarMore {
+    height: 100vh;
+    padding-left: 64px;
+    width: 319px;
+}
+.suggestedFollow {
+    margin-top: 36px;
+}
+.containerSidebarMore, .viewMore {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.wrapperImageUser {
+    width: 44px;
+    margin-right: 12px;
+}
+
+.viewMore {
+    padding: 4px 16px;
+    box-sizing: border-box;
+}
+.titleSidebarMore {
+    font-size: 14px;
+    color: #737373;
+    font-weight: 600;
+    margin: 0;
+}
+.seeAllSidebarMore {
+    font-size: 12px;
+    font-weight: 600;
+    color: #000000;
+}
+
+.listUser {
+    list-style: none;
+    padding: 8px 0;
+    margin: 0;
+    width: 100%;
+}
+.itemUser, .wrapperItemUser {
+    display: flex;
+    align-items: center;
+}
+.wrapperItemUser {
+    
+}
+.itemUser {
+    padding: 8px 16px;
+    justify-content: space-between;
+}
+    .avatar {
+    width: 100%;
+    border-radius: 50%;
+    border: solid 1px #cccccc;
+}
+.username {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000;
+}
+.status {
+    font-size: 12px;
+    color: #737373;
+}
+.textFollow {
+    font-size: 12px;
+    font-weight: 600;
+    color: #0095F6;
+}
