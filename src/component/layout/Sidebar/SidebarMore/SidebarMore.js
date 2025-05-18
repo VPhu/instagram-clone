@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "./SidebarMore.module.css";
-import vPhong from "../../../../assets/vanphong.jpg"
-import tSon from "../../../../assets/thanhson.jpg"
-import vThuong from "../../../../assets/vanthuong.jpg"
-import nXuan from "../../../../assets/xuannguyen.jpg"
-import nNhu from "../../../../assets/nhunhu.jpg"
+import vPhong from "../../../../assets/vanphong.jpg";
+import tSon from "../../../../assets/thanhson.jpg";
+import vThuong from "../../../../assets/vanthuong.jpg";
+import nXuan from "../../../../assets/xuannguyen.jpg";
+import nNhu from "../../../../assets/nhunhu.jpg";
 
 const newFriends = [
   {
@@ -67,9 +67,7 @@ const SidebarMore = () => {
           </ul>
         </div>
       </div>
-      <div className={styles.footerSidebarMore}>
-            
-      </div>
+      <div className={styles.footerSidebarMore}></div>
     </div>
   );
 };
