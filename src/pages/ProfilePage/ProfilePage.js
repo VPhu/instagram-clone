@@ -56,7 +56,13 @@ const Profile = () => {
           <div className={styles.profileMore}>
             <div className={styles.controlBarProfile}>
               {itemControl.map((item, index) => (
-                <div className={`${styles.controlElement} ${active === item.name ? styles.activeControl : ""}`} key={index} onClick={()=>setActive(item.name)}>
+                <div
+                  className={`${styles.controlElement} ${
+                    active === item.name ? styles.activeControl : ""
+                  }`}
+                  key={index}
+                  onClick={() => setActive(item.name)}
+                >
                   <div className={styles.controlElementIcon}>
                     <i className={item.icon}></i>
                   </div>
