@@ -6,6 +6,7 @@ import Login from "./pages/Login/Login";
 import Signup from "./pages/Signup/Signup";
 import Profile from "./pages/ProfilePage/ProfilePage";
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import Test from "./pages/test";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/Signup" element={<Signup />} />
           <Route path="/Profile" element={<Profile />} />
+          <Route path="/test" element={<Test />} />
         </Routes>
       </Router>
     </GlobalStyles>
