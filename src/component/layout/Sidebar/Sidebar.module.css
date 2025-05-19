@@ -1,0 +1,96 @@
+.sidebar {
+  position: relative;
+  height: 100vh;
+  padding: 8px 12px 20px;
+  border-right: 1px solid rgb(219, 219, 219);
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+.sidebarContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.sidebarWrapper {
+  padding: 0px;
+  margin: 0;
+}
+
+.itemNavLink {
+  text-decoration: none;
+  color: #000000;
+}
+
+.itemNavBtn {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+}
+
+.iconCustom {
+  font-size: 24px;
+}
+
+.itemNavName {
+  padding-left: 16px;
+  font-size: 16px;
+}
+
+.iconLogo {
+  font-size: 24px;
+  padding: 12px;
+  margin: 4px 0;
+}
+
+.sidebarLogo {
+  margin-top: 12px;
+  padding-bottom: 23px;
+}
+
+.sidebarLogoHead {
+  height: 73px;
+  box-sizing: border-box;
+  padding: 25px 12px 16px;
+  margin-bottom: 19px;
+}
+
+.logoSidebar {
+  background-image: url("../../../assets/logo.png");
+  background-position: 0px -30px;
+  background-size: 53%;
+  width: 196px;
+  height: 100%;
+  background-repeat: no-repeat;
+  margin-top: 10px;
+}
+
+.sidebarLinkItem {
+  padding: 12px;
+  list-style: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 4px 0;
+}
+
+.sidebarLinkItem:hover {
+  background-color: #f2f2f2;
+}
+
+.sidebarLinkItem:active {
+  opacity: 0.5;
+}
+
+.modalSidebar {
+  position: absolute;
+  top: 0;
+  left: 76px;
+  height: 100%;
+  z-index: 9999;
+}
+
+.activeItemNav {
+  background-color: #f2f2f2;
+  border: 1px solid #cccccc;
+  font-weight: 700;
+}

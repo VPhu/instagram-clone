@@ -1,0 +1,15 @@
+.wrapperHome {
+    display: flex;
+    height: 100vh;
+}
+.containerHome {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    margin-left: auto;
+}
+
+.mainHome {
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,115 @@
+.postWrapper {
+  width: 630px;
+}
+.post {
+  width: 468px;
+  margin: 0 auto;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.personPosting {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 12px;
+}
+
+.posterInfor {
+  display: flex;
+  font-size: 14px;
+  align-items: center;
+}
+
+.posterImageWrapper {
+  margin-right: 12px;
+}
+.posterImage {
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.postImage {
+  width: 100%;
+}
+
+.postingTime {
+  display: flex;
+  align-items: center;
+  color: #737373;
+  cursor: pointer;
+}
+.iconDot {
+  margin: 0 4px;
+  font-size: 5px;
+}
+
+.nameUser,
+.interactionTurn {
+  color: #000000;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.additionalActionButton {
+  font-size: 18px;
+  text-align: center;
+  width: 24px;
+  cursor: pointer;
+}
+
+.postImage {
+  border-radius: 3px;
+}
+
+.postInteraction {
+  display: flex;
+  margin: 4px 0;
+  font-size: 24px;
+  justify-content: space-between;
+  align-items: center;
+}
+.firstInteraction {
+  display: flex;
+  gap: 16px;
+  cursor: pointer;
+}
+.endInteraction {
+  cursor: pointer;
+}
+.iconPostLikes,
+.iconPostComments,
+.iconPostShare {
+  box-sizing: border-box;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+.nameUserContent {
+  color: #000000;
+  margin-right: 4px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.submitComments,
+.showComments {
+  margin-top: 8px;
+  color: #737373;
+}
+.showComments {
+  cursor: pointer;
+}
+.inputComment {
+  padding-bottom: 16px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.inputComment:focus {
+  outline: none;
+  box-shadow: none;
+}

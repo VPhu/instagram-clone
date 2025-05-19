@@ -1,0 +1,95 @@
+.searchWrapper {
+  width: 394px;
+  height: 100%;
+  background-color: #ffffff;
+  border-left: none;
+  border-radius: 0px 20px 20px 0;
+  box-shadow: rgba(0, 0, 0, 0.15) 4px 0 8px -2px;
+}
+.titleSearch {
+  margin: 0;
+  font-weight: 500;
+  padding: 25px;
+}
+.searchInput {
+  margin: 15px 15px;
+  font-size: 16px;
+  width: calc(100% - 30px);
+  background-color: #efefef;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+.searchBar {
+  border-bottom: 2px solid #ebebeb;
+}
+
+.recentWrapper {
+  padding-top: 12px;
+}
+.recentTitleWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 6px 24px 8px;
+  padding-top: 4px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.btnClearSearch {
+  color: #0095F6;
+  font-size: 14px;
+}
+
+.recentContainerNoData {
+    max-height: 640px;
+  overflow-y: auto;
+  padding: 8px 24px;
+}
+
+
+.avtarUserWrapper {
+  margin-right: 12px;
+}
+.searchList {
+  padding: 0;
+  margin: 0;
+}
+.searchListItem, .follow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.searchListItem {
+  padding: 8px 24px;
+}
+.avtarUser {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%; 
+}
+
+.infoUser {
+  font-size: 14px;
+  width: 245px;
+}
+.fullName {
+  margin: 0;
+  color: #737373;
+  display: flex;
+}
+.iconDotFollow {
+  font-size: 4px;
+  padding: 0 5px;
+}
+.iconClearWrapper {
+  width: 44px;
+}
+.iconClearSearch {
+  padding: 8px;
+}
+
+.btnClearSearch, .searchListItem {
+  cursor: pointer;
+}
