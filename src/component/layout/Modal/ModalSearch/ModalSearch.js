@@ -1,4 +1,5 @@
 import React from "react";
+import SidebarModalWrapper from "../SidebarModalWrapper/SidebarModalWrapper";
 import styles from "./ModalSearch.module.css";
 const dataSearch = [
   {
@@ -14,11 +15,11 @@ const dataSearch = [
     follow: false,
   },
 ];
-const ModalSearch = () => {
+const ModalSearch = ({modal, ref}) => {
   return (
-    <div className={styles.searchWrapper}>
-      <h1 className={styles.titleSearch}>Search</h1>
-      <div className={styles.searchBar}>
+    <div ref={ref} className={styles.searchWrapper}>
+      <SidebarModalWrapper title="Search" isOpen={modal}>
+        <div className={styles.searchBar}>
         <input className={styles.searchInput} placeholder="Search" />
       </div>
       <div className={styles.recentWrapper}>
@@ -59,6 +60,8 @@ const ModalSearch = () => {
           </div>
         )}
       </div>
+      </SidebarModalWrapper>
+      
     </div>
   );
 };

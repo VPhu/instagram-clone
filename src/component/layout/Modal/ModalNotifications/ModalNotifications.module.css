@@ -1,10 +1,5 @@
 .notificationsWrapper {
-  width: 394px;
-  height: 100%;
-  background-color: #ffffff;
-  border-left: none;
-  border-radius: 0px 20px 20px 0;
-  box-shadow: rgba(0, 0, 0, 0.15) 4px 0 8px -2px;
+height: 100%;
 }
 .notificationsTitle {
   margin: 0;
