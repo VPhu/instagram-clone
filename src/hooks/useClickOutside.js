@@ -6,11 +6,8 @@ const useOutsideClick = (callback) => {
   useEffect(() => {
     const handleClickOutside = (event) => {
        if (ref.current && !ref.current.contains(event.target)) {
-        const isModalToggleButton = event.target.closest("button[data-modal-toggle]");
-        if (!isModalToggleButton) {
           callback();
         }
-      }
     };
 
     document.addEventListener('mousedown', handleClickOutside);

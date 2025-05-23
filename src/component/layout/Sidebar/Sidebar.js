@@ -53,8 +53,14 @@ const menuItems2 = [
 
 const Sidebar = () => {
   const [modal, setModal] = useState("");
-  const searchModalRef = useOutsideClick(() => setModal(""));
-  const notifModalRef = useOutsideClick(() => setModal(""));
+
+  const handleCloseExpander = () => {
+    if (modal) {
+      setModal("");
+    }
+  };
+
+  const modalRef = useOutsideClick(handleCloseExpander);
 
   const handleSidebarModal = (type) => {
     setModal((prev) => (prev === type ? "" : type));
@@ -77,6 +83,7 @@ const Sidebar = () => {
 
   return (
     <div
+      ref={modalRef}
       className={`${styles.sidebar} ${
         modal ? styles.sidebarContainerChange : ""
       }`}
@@ -109,7 +116,6 @@ const Sidebar = () => {
               {item.modal ? (
                 <button
                   className={styles.itemNavBtn}
-                  data-modal-toggle
                   onClick={() => handleSidebarModal(item.modal)}
                 >
                   {renderNavItem(item)}
@@ -134,8 +140,8 @@ const Sidebar = () => {
         </ul>
       </div>
       <div>
-        <SearchComponent ref={searchModalRef} modal={modal === "search"} />
-        <NotifComponent ref={notifModalRef} modal={modal === "notifications"} />
+        <SearchComponent modal={modal === "search"} />
+        <NotifComponent modal={modal === "notifications"} />
       </div>
       <div className={styles.sidebarMobile}>
         {menuItems.map((item, index) =>
