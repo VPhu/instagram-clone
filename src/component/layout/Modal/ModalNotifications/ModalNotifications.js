@@ -1,4 +1,5 @@
 import React from "react";
+import SidebarModalWrapper from "../SidebarModalWrapper/SidebarModalWrapper";
 import styles from "./ModalNotifications.module.css";
 
 const dataNoti = [
@@ -25,11 +26,11 @@ const dataNoti = [
   },
 ];
 
-const ModalNotifications = () => {
+const ModalNotifications = ({modal}) => {
   return (
     <div className={styles.notificationsWrapper}>
-      <h1 className={styles.notificationsTitle}>Notifications</h1>
-      <div className={styles.notificationsContainer}>
+      <SidebarModalWrapper title="Notifications" isOpen={modal}>
+        <div className={styles.notificationsContainer}>
         {!dataNoti.length ? (
           <div className={styles.notificationsNoData}>
             <div className={styles.notificationsNoDataIconWrapper}>
@@ -100,6 +101,8 @@ const ModalNotifications = () => {
           </ul>
         )}
       </div>
+      </SidebarModalWrapper>
+      
     </div>
   );
 };
