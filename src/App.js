@@ -6,6 +6,7 @@ import Login from "./pages/Login/Login";
 import Signup from "./pages/Signup/Signup";
 import Profile from "./pages/ProfilePage/ProfilePage";
 import Explore from "./pages/Explore/Explore";
+import { ToastContainer } from "react-toastify";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/explore" element={<Explore/>}/>
         </Routes>
       </Router>
+      <ToastContainer/>
     </GlobalStyles>
   );
 }

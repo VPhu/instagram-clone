@@ -20,9 +20,67 @@
 .leaenMore {
   margin-bottom: 10px;
 }
+.inputSignupItem {
+  position: relative;
+  margin-bottom: 6px;
+}
 .endFormSignup {
   padding-bottom: 25px;
 }
 .haveAccount {
   display: grid;
 }
+
+.iconErrorInput {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 48px;
+  font-size: 22px;
+  color: #FF3040;
+}
+.errorMessage {
+  color: #FF3040;
+  display: inline-block;
+  margin: 0px 0 14px 8px;
+  width: 260px;
+  font-size: 12px;
+  text-align: left;
+}
+
+.inputInteraction {
+  position: absolute;
+  display: flex;
+  align-items: center;
+    top: 50%;
+  transform: translateY(-50%);
+  right: 48px;
+}
+.iconErrorInputPass {
+    font-size: 22px;
+  color: #FF3040;
+}
+.passStatus {
+  margin-left: 8px;
+}
+.passStatus:hover {
+  opacity: 0.5;
+  cursor: pointer;
+  user-select: none;
+}
+.passStatusText {
+  font-weight: 600;
+  font-size: 14px;
+
+}
+
+@media (max-width: 450px) {
+  .containerSignup {
+    margin: 0 auto;
+    width: auto;
+  }
+  .hideBoder {
+    border: none;
+  }
+}
+
