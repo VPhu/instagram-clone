@@ -33,8 +33,7 @@
 
 .iconErrorInput {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 5%;
   right: 48px;
   font-size: 22px;
   color: #FF3040;
