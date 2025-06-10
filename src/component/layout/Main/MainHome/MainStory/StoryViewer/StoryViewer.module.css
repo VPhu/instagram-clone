@@ -29,10 +29,11 @@
 
 .viewer {
   position: relative;
-  width: 437px;
-  height: 710px;
+  width: 500px;
+  height: 889px;
+  max-height: 90%;
+  aspect-ratio: 9 / 16;
   border-radius: 10px;
-  overflow: hidden;
   box-sizing: border-box;
 }
 
@@ -114,10 +115,11 @@
   align-items: center;
   bottom: 10px;
   height: 100%;
+  width: 100%;
 }
 .controlBarItemLeft,
 .controlBarItemRight {
-  position: fixed;
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -134,10 +136,10 @@
   background-color: #fff;
 }
 .controlBarItemLeft {
-  left: 376px;
+  left: -52px;
 }
 .controlBarItemRight {
-  right: 376px;
+  right: -52px;
 }
 
 .controls button {
@@ -217,4 +219,26 @@
 
 .liked {
   color: red;
+}
+
+@media (max-width: 1024px) {
+  .viewer {
+    width: 335px;
+    height: 632px;
+  }
+}
+
+@media (max-width: 766px) {
+    .viewer {
+    width: 100%;
+    max-width: 327.375px;
+    max-height: unset;
+    height: 650px;
+    }
+    .content {
+     height: 582px;
+    }
+    .logoInstagramWrapper, .controlBar {
+      display: none ;
+    }
 }

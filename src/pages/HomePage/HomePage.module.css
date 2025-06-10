@@ -13,3 +13,11 @@
   display: flex;
   justify-content: center;
 }
+
+@media (max-width: 768px) {
+  
+  .mainHome {
+    max-width: 630px;
+    margin: 0 auto;
+  }
+}

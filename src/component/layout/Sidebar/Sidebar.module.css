@@ -127,6 +127,9 @@
   margin: 0;
   opacity: 0;
 }
+.sidebarMobile {
+  display: none;
+}
 
 @media (max-width: 1262px) {
   .sidebar {

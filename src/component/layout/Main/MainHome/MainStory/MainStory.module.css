@@ -79,3 +79,10 @@
   border-radius: 50%;
   background-color: #ffffff;
 }
+
+@media (max-width:768px) {
+  .wrapperMainStory {
+    width: calc(100% - 8px);
+    margin: 0 4px;
+  }
+}

@@ -82,3 +82,9 @@
   color: #00376b;
   text-decoration: none;
 }
+
+@media (max-width: 480px) {
+    .postFoot {
+    padding: 0 16px;
+  }
+}

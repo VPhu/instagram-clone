@@ -1,5 +1,5 @@
 .postWrapper {
-  width: 630px;
+  max-width: 630px;
 }
 .post {
   width: 468px;
@@ -112,4 +112,26 @@
 .inputComment:focus {
   outline: none;
   box-shadow: none;
+}
+
+@media (max-width: 768px) {
+  .postWrapper {
+    width: 100%;
+  }
+  .post {
+    width: 468px;
+  }
+}
+
+@media (max-width: 480px) {
+  .post {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  .personPosting {
+    padding: 14px 16px;
+  }
+  .inputComment {
+    display: none;
+  }
 }

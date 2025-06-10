@@ -1,3 +1,9 @@
 .mainHomeContainer {
   margin-top: 16px;
 }
+
+@media (max-width: 768px) {
+  .mainHomeContainer {
+    width: 100%;
+  }
+}
