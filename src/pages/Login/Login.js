@@ -24,22 +24,22 @@ const Login = () => {
     setShowPass(!showPass);
   };
 
-  const checkForm = useCallback(() => {
+  const checkFormLogin = useCallback(() => {
     const isEmail = EMAIL_REGEX.test(email);
     const isPassword = password.length >= MIN_PASSWORD_LENGTH;
     return isEmail && isPassword;
   }, [email, password]);
 
   useEffect(() => {
-    checkForm() ? setValidInfo(true) : setValidInfo(false);
-  }, [checkForm]);
+    checkFormLogin() ? setValidInfo(true) : setValidInfo(false);
+  }, [checkFormLogin]);
 
   const handleLogin = async () => {
     if (!validInfo) {
       return;
     }
     try {
-      const response = await fetch("http://localhost:3000/api/auth/login", {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/auth/login`, {
         method: "POST",
         headers: {
           "Cache-Control": "no-cache",
@@ -59,15 +59,13 @@ const Login = () => {
           setToken(data.token)
           localStorage.setItem("user",JSON.stringify(data.user))
           navigate("/")   
-        }, 3000)
+        }, 1000)
       } else {
         if (data.message) {
           setErrorsLogin(true);
         }
       }
-    } catch (error) {
-      toast.error(error);
-    }
+    } catch {}
   };
 
   return (
@@ -85,15 +83,15 @@ const Login = () => {
           </div>
 
           <div className={styles.formSectionLogin}>
-            <div className="firstBox">
-              <div className="wrapperLogo">
-                <div className="logoInstagramLogin"></div>
+            <div className="first-box">
+              <div className="wrapper-logo">
+                <div className="logo-instagram-login"></div>
               </div>
               <div className={styles.formLogin}>
                 <div className={styles.inputLoginWrapper}>
                   <input
                     type="email"
-                    className="inputField"
+                    className="input-field"
                     placeholder="Phone number, or email"
                     onChange={(e) => {
                       handleChangeInput(e, setEmail);
@@ -103,7 +101,7 @@ const Login = () => {
                 <div className={styles.inputLoginWrapper}>
                   <input
                     type={showPass ? "text" : "password"}
-                    className="inputField"
+                    className="input-field"
                     placeholder="Password"
                     onCopy={showPass ? (e) => e.preventDefault() : undefined}
                     onChange={(e) => {
@@ -122,13 +120,13 @@ const Login = () => {
                 </div>
               </div>
               <button
-                className={`btnSubmit ${validInfo ? "btnSubmitValid" : ""}`}
+                className={`btn-submit ${validInfo ? "btn-submit-valid" : ""}`}
                 onClick={handleLogin}
               >
                 Log in
               </button>
-              <p className="orText">OR</p>
-              <button className="fbLoginBtn">Log in with Facebook</button>
+              <p className="or-text">OR</p>
+              <button className="fb-login-btn">Log in with Facebook</button>
               {errorLogin && (
                 <span className={styles.errorMessage}>
                   Sorry, your password was incorrect. Please double-check your
@@ -139,10 +137,10 @@ const Login = () => {
                 <Link to="/forgotpassword">Forgot password?</Link>
               </p>
             </div>
-            <div className="secondBox">
+            <div className="second-box">
               <p>
                 Don't have an account?{" "}
-                <Link className="pageChange" to="/signup">
+                <Link className="page-change" to="/signup">
                   Sign up
                 </Link>
               </p>
