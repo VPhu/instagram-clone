@@ -1,10 +1,11 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { EMAIL_REGEX, USERNAME_REGEX, MIN_PASSWORD_LENGTH } from "../../constants/regex";
 import Footer from "../../component/layout/Footer/Footer";
 import { toast } from "react-toastify";
 import styles from "./Signup.module.css";
 const Signup = () => {
-  const [emailOrPhone, setEmailOrPhone] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [fullName, setFullName] = useState("");
   const [username, setUsername] = useState("");
@@ -16,20 +17,19 @@ const Signup = () => {
   const validate = (nameInput, value) => {
     const errors = {};
 
-    const isEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
-    const isPhone = /^(\+?\d{8,15})$/.test(value);
-    const checkUsername = /^[a-zA-Z0-9._]+$/.test(value);
+    const isEmail = EMAIL_REGEX.test(value);
+    const checkUsername = USERNAME_REGEX.test(value);
 
-    if (nameInput === "emailOrPhone") {
+    if (nameInput === "email") {
       if (!value.trim()) {
-        errors.emailOrPhone = "This field is required.";
-      } else if (!isEmail && !isPhone) {
-        errors.emailOrPhone = "Invalid email or phone number.";
+        errors.email = "This field is required.";
+      } else if (!isEmail) {
+        errors.email = "Invalid email or phone number.";
       }
     }
 
     if (nameInput === "password") {
-      if (!value || value.length < 6) {
+      if (!value || value.length < MIN_PASSWORD_LENGTH) {
         errors.password =
           "Create a password that is at least 6 characters long.";
       }
@@ -72,12 +72,12 @@ const Signup = () => {
 
   const validInfo = useCallback(() => {
     return {
-      ...validate("emailOrPhone", emailOrPhone),
+      ...validate("email", email),
       ...validate("password", password),
       ...validate("fullName", fullName),
       ...validate("username", username)
     }
-  },[emailOrPhone, password, fullName, username]);
+  },[email, password, fullName, username]);
 
   useEffect(()=>{
     const checkErrorFull = validInfo()
@@ -98,7 +98,7 @@ const Signup = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           username,
-          email: emailOrPhone,
+          email,
           password,
           fullName,
         }),
@@ -112,7 +112,7 @@ const Signup = () => {
       } else {
         if(data.message) {
           if(data.message.toLowerCase().includes("user already exists")) {
-          setErrorsAuth((prev)=>({...prev, emailOrPhone: "Another account is using the same email."}))
+          setErrorsAuth((prev)=>({...prev, email: "Another account is using the same email."}))
         } else if (data.message.toLowerCase().includes("username") && data.message.toLowerCase().includes("dup")) {
           setErrorsAuth((prev)=>({...prev, username: "That username is already taken."}))
         }
@@ -140,27 +140,27 @@ const Signup = () => {
               <input
                 type="text"
                 className={`inputField ${
-                  errorAuth.emailOrPhone ? "inputError" : ""
+                  errorAuth.email ? "inputError" : ""
                 }`}
-                placeholder="Mobile number or email"
-                value={emailOrPhone}
-                name="emailOrPhone"
+                placeholder="Email"
+                value={email}
+                name="email"
                 onChange={(e) => {
-                  handleChangeInput(e, setEmailOrPhone);
+                  handleChangeInput(e, setEmail);
                 }}
                 onBlur={(e) => {
                   handleBlurInput(e);
                 }}
               />
-              {errorAuth.emailOrPhone && (
+              {errorAuth.email && (
                 <div className={styles.iconErrorInput}>
                   <i className="fa-regular fa-circle-xmark"></i>
                 </div>
               )}
             </div>
-            {errorAuth.emailOrPhone && (
+            {errorAuth.email && (
               <span className={styles.errorMessage}>
-                {errorAuth.emailOrPhone}
+                {errorAuth.email}
               </span>
             )}
             <div className={styles.inputSignupItem}>

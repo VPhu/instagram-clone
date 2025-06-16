@@ -1,13 +1,14 @@
 import React, { useCallback, useEffect } from "react";
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
+import { EMAIL_REGEX, MIN_PASSWORD_LENGTH } from "../../constants/regex";
 import { toast } from "react-toastify";
 import { setToken } from "../../utils/cookie";
 import Footer from "../../component/layout/Footer/Footer";
 import styles from "./Login.module.css";
 
 const Login = () => {
-  const [emailOrPhone, setEmailOrPhone] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPass, setShowPass] = useState(false);
   const [errorLogin, setErrorsLogin] = useState(false);
@@ -24,10 +25,10 @@ const Login = () => {
   };
 
   const checkForm = useCallback(() => {
-    const isEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailOrPhone);
-    const isPhone = /^(\+?\d{8,15})$/.test(emailOrPhone);
-    return (isEmail || isPhone) && password.length > 5;
-  }, [emailOrPhone, password]);
+    const isEmail = EMAIL_REGEX.test(email);
+    const isPassword = password.length >= MIN_PASSWORD_LENGTH;
+    return isEmail && isPassword;
+  }, [email, password]);
 
   useEffect(() => {
     checkForm() ? setValidInfo(true) : setValidInfo(false);
@@ -46,7 +47,7 @@ const Login = () => {
           "Accept": "*/*",
         },
         body: JSON.stringify({
-          email: emailOrPhone,
+          email,
           password,
         }),
       });
@@ -95,7 +96,7 @@ const Login = () => {
                     className="inputField"
                     placeholder="Phone number, or email"
                     onChange={(e) => {
-                      handleChangeInput(e, setEmailOrPhone);
+                      handleChangeInput(e, setEmail);
                     }}
                   />
                 </div>

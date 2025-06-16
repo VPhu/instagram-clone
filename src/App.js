@@ -7,7 +7,7 @@ import Signup from "./pages/Signup/Signup";
 import Profile from "./pages/ProfilePage/ProfilePage";
 import Explore from "./pages/Explore/Explore";
 import PrivateRoute from "./component/layout/PrivateRoute";
-import PublicRoute from "./component/layout/PublicRoute";
+import AuthRoute from "./component/layout/AuthRoute";
 import { ToastContainer } from "react-toastify";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
@@ -18,8 +18,8 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<PrivateRoute><HomePage /></PrivateRoute>} />
-          <Route path="/login" element={<PublicRoute><Login /></PublicRoute>} />
-          <Route path="/Signup" element={<PublicRoute><Signup /></PublicRoute>} />
+          <Route path="/login" element={<AuthRoute><Login /></AuthRoute>} />
+          <Route path="/Signup" element={<AuthRoute><Signup /></AuthRoute>} />
           <Route path="/Profile" element={<PrivateRoute><Profile /></PrivateRoute>} />
           <Route path="/explore" element={<PrivateRoute><Explore/></PrivateRoute>}/>
         </Routes>
