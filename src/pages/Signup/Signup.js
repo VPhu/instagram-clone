@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { EMAIL_REGEX, USERNAME_REGEX, MIN_PASSWORD_LENGTH, EMOJI_REGEX } from "../../constants/regex";
 import Footer from "../../component/layout/Footer/Footer";
 import { toast } from "react-toastify";
 import classNames from "classnames";
@@ -17,11 +18,10 @@ const Signup = () => {
   const validate = (nameInput, value) => {
     const errors = {};
 
-    const isEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(
-      value
-    );
-    const isValidUserName = /^[a-zA-Z0-9._]+$/.test(value);
-    const containsEmoji = /[\u{1F600}-\u{1F64F}]/u.test(password);
+    const isEmail = EMAIL_REGEX.test(value);
+
+    const isValidUserName = USERNAME_REGEX.test(value);
+    const containsEmoji = EMOJI_REGEX.test(password);
 
     if (nameInput === "email") {
       if (!value.trim()) {
@@ -32,7 +32,7 @@ const Signup = () => {
     }
 
     if (nameInput === "password") {
-      if (!value || value.length < 6) {
+      if (!value || value.length < MIN_PASSWORD_LENGTH) {
         errors.password =
           "Create a password that is at least 6 characters long.";
       } else if (containsEmoji) {
